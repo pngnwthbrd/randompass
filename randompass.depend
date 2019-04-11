@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1554907115 source:e:\dev\c\randompass\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
