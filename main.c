@@ -6,7 +6,7 @@
 int main()
 {
     const int max_numbers = 20;
-    char alphabet[31] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    const char alphabet[31] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                          'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
                          'z', '$', '*', '(', ')', '#'};
 
@@ -17,6 +17,11 @@ int main()
         char  str;
         char mix[2];
         char pass[20] = "";
+
+        const unsigned int pass_size;
+
+        printf("Please enter a password size (max size: %d): ", max_numbers);
+        scanf("%d", &pass_size);
 
         for (int i = 0; i < max_numbers/2; i++)
         {
@@ -32,10 +37,13 @@ int main()
             strcat(pass, mix);
         }
 
+        char return_pass[] = "";
+        strncat(return_pass, pass, pass_size);
+
         char exit;
 
         printf("Your random password: %s\n\nPress Enter to get another password\n"
-                    "or Enter 'e' to quit\n",  pass);
+                    "or Enter 'e' to quit\n",  return_pass);
         scanf("%c", &exit);
 
         if (exit != '\n' && exit != 'e')
