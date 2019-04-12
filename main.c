@@ -20,7 +20,7 @@ int main()
 
         const unsigned int pass_size;
 
-        printf("Please enter a password size (max size: %d): ", max_numbers);
+        printf("Please enter password size (max size: %d) or 'e' to exit: ", max_numbers);
         scanf("%d", &pass_size);
 
         for (int i = 0; i < max_numbers/2; i++)
@@ -41,15 +41,15 @@ int main()
         strncat(return_pass, pass, pass_size);
 
         char exit;
-
-        printf("Your random password: %s\n\nPress Enter to get another password\n"
-                    "or Enter 'e' to quit\n",  return_pass);
         scanf("%c", &exit);
 
         if (exit != '\n' && exit != 'e')
             continue;
         else if (exit == 'e')
             break;
+
+        printf("Your random password: %s: \n\n",  return_pass);
+
     }
 
 }
