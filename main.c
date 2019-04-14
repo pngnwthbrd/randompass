@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#define MAX_NUMBERS 20
 
 int main()
 {
-    const int max_numbers = 20;
     const char alphabet[31] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                          'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
                          'z', '$', '*', '(', ')', '#'};
@@ -16,14 +16,14 @@ int main()
         unsigned int n, c;
         char  str;
         char mix[2];
-        char pass[20] = "";
+        char pass[MAX_NUMBERS] = "";
 
         const unsigned int pass_size;
 
-        printf("Please enter password size (max size: %d) or 'e' to exit: ", max_numbers);
+        printf("Please enter password size (max size: %d) or 'e' to exit: ", MAX_NUMBERS);
         scanf("%d", &pass_size);
 
-        for (int i = 0; i < max_numbers/2; i++)
+        for (int i = 0; i < MAX_NUMBERS/2; i++)
         {
             n = rand() % 10;
             str = alphabet[rand() % 31];
