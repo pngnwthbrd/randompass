@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1558565845 source:/home/elus/work/dev/c/randompass/main.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-
